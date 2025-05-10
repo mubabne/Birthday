@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Төрсөн Өдрийн Мэнд</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fdeff9 0%, #e1cbee 100%);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      color: #4b2e5a;
+      text-align: center;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .firework {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: url('https://media.giphy.com/media/3o6ZsW9xQhp3uD58rm/giphy.gif') no-repeat center/contain;
+      animation: rise 2s ease-in-out infinite;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      margin-top: 10vh;
+      background: #fff6fd;
+      border: 2px dashed #ff90b3;
+      border-radius: 16px;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .emoji-row {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p.poem {
+      font-size: 16px;
+      line-height: 1.6;
+      white-space: pre-line;
+      margin-top: 10px;
+    }
+
+    .cat {
+      margin-top: 20px;
+      animation: bounce 1s infinite ease-in-out;
+      width: 80px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .gift-btn {
+      margin-top: 20px;
+      background: #f7b733;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .gift-btn:hover {
+      background: #ff9800;
+      box-shadow: 0 0 10px #f7b733;
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="firework" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="firework" style="left: 50%; animation-delay: 0.5s;"></div>
+    <div class="firework" style="left: 80%; animation-delay: 1s;"></div>
+  </div>
+
+  <div class="card">
+    <div class="emoji-row">🎂 🎈 🎁</div>
+    <h1>Төрсөн өдрийн мэнд хүргэе!</h1>
+    <p class="poem">
+Нарны туяа шиг гэрэлтэх энэхүү өдөрт
+Нандин инээмсэглэл, халуун сэтгэл бэлэглэе
+Од мэт цацарсан мөрөөдлүүд чинь биелээсэй
+Оюун бодол тань үргэлж гэрэл гэгээтэй байг ээ
+
+Амьдралын уянга аялгуу эгшиглэн цуурайт
+Аз жаргал, хайр энэрэл зүрхэнд тань хурагтун
+Таныг хүндэлж, хайрладаг сэтгэл зүрхнээс
+Тэнгэрлэг төрсөн өдрийн мэндчилгээ илгээе 🥳
+    </p>
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Happy Cat" class="cat"/>
+    <br>
+    <button class="gift-btn" onclick="alert('Танд 10 BEER уух эрх олгогдлоо! 🎉')">🎁 Бэлэг авах</button>
+  </div>
+</body>
+</html>
